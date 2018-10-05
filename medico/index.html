@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="pt-BR" class="no-js">
+	<head>
+		<meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7, IE=9" />
+        <!-- CSS -->
+        <link href="../css/style.css?ver=1.1.1" rel="stylesheet" />
+        <link href="../css/font-awesome.css?ver=1.1.1" rel="stylesheet" />
+        <link href="../css/owl.carousel.css" rel="stylesheet">
+    	<link href="../css/owl.theme.css" rel="stylesheet">
+
+        <!-- SEO -->
+		<title>Connectdoc - Especialista</title>
+		<meta name="description" content="ENCONTRE OS MELHORES ESPECIALISTAS NAS MELHORES CLÍNICAS E CONSULTÓRIOS">
+        <meta name="keywords" content="especialista, médico, consultório, clínica, busca, melhor, clínico, hospital, login">
+        <link sizes="16x16 24x24 32x32 48x48 64x64 128x128 256x256" type="image/x-icon" href="../images/favicon.ico" rel="icon shortcut">
+        <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+        <meta property="og:title" content="CONNECTDOC - ENCONTRE OS MELHORES ESPECIALISTAS NAS MELHORES CLÍNICAS E CONSULTÓRIOS"/>
+        <meta property="og:type" content="service"/>
+        <meta property="og:url" content="http://www.connectdoc.com/"/>
+        <meta property="og:image" content="../images/apple-touch-icon.png"/>
+        <meta property="og:site_name" content="Connectdoc"/>
+        <meta property="fb:admins" content="496965520357508"/>
+        <meta property="og:description" content="ENCONTRE OS MELHORES ESPECIALISTAS NAS MELHORES CLÍNICAS E CONSULTÓRIOS"/>
+
+    	<!-- JS -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript"></script>
+        <script type="text/javascript" src="js/modernizr.js"></script>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCg5prGZ57DxvBUfnqZxPuFP-43N27RoeQ&sensor=false"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <script src="../js/bootstrap-select.js"></script>
+        <script type="text/javascript">
+            // When the window has finished loading create our google map below
+            google.maps.event.addDomListener(window, 'load', init);
+            function init() {
+                var mapOptions = {
+                    // How zoomed in you want the map to start at (always required)
+                    zoom: 16,
+					scrollwheel: false,
+					navigationControl: false,
+					mapTypeControl: false,
+					scaleControl: false,
+					draggable: false,
+					zoomControl: true,
+					draggable: true,
+					keyboardShortcuts: false,
+					mapMaker: false,
+					panControl: false,
+					rotateControl: false,
+					streetViewControl: true,
+					disableDoubleClickZoom: true,
+					mapTypeId: google.maps.MapTypeId.ROADMAP,
+                    center: new google.maps.LatLng(45.7706171, 4.852382), // The latitude and longitude to center the map (always required)
+                    styles:
+					[
+						{
+							"stylers": [
+								{
+									"visibility": "off"
+								}
+							]
+						},
+						{
+							"featureType": "road",
+							"stylers": [
+								{
+									"visibility": "on"
+								},
+								{
+									"color": "#ffffff"
+								}
+							]
+						},
+						{
+							"featureType": "road.arterial",
+							"stylers": [
+								{
+									"visibility": "on"
+								},
+								{
+									"color": "#ffffff"
+								}
+							]
+						},
+						{
+							"featureType": "road.highway",
+							"stylers": [
+								{
+									"visibility": "on"
+								},
+								{
+									"color": "#ffffff"
+								}
+							]
+						},
+						{
+							"featureType": "landscape",
+							"stylers": [
+								{
+									"visibility": "on"
+								},
+								{
+									"color": "#f4f4f4"
+								}
+							]
+						},
+						{
+							"featureType": "water",
+							"stylers": [
+								{
+									"visibility": "on"
+								},
+								{
+									"color": "#dddddd"
+								}
+							]
+						},
+						{},
+						{
+							"featureType": "road",
+							"elementType": "labels",
+							"stylers": [
+								{
+									"visibility": "off"
+								}
+							]
+						},
+						{
+							"featureType": "poi.park",
+							"elementType": "geometry.fill",
+							"stylers": [
+								{
+									"visibility": "on"
+								},
+								{
+									"color": "#e3e3e3"
+								}
+							]
+						},
+						{
+							"elementType": "labels",
+							"stylers": [
+								{
+									"visibility": "on"
+								}
+							]
+						},
+						{
+							"featureType": "landscape.man_made",
+							"elementType": "geometry",
+							"stylers": [
+								{
+									"weight": 0.2
+								},
+								{
+									"visibility": "off"
+								}
+							]
+						}
+					]
+				};
+                var mapElement = document.getElementById('map');
+                var map = new google.maps.Map(mapElement, mapOptions);
+            }
+        </script>
+	</head>
+	<body>
+        <div id="wrapper" class="page-specialist">
+            <header id="header" class="generic-bar">
+                <div class="header-search">
+                    <form name="search" action="../search/" method="GET" id="">
+                        <fieldset>
+                            <input type="text" class="" name="q" id="" size="50" maxlength="150" value="" placeholder="Procure especialista por nome, localidade, plano e especialidade" autocomplete="off">
+                            <button type="submit" id="" title="Buscar melhor especialista" alt="Buscar melhor especialista" class="btn btn-search"><span>Buscar</span></button>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="header-bar">
+                    <div class="row">
+                        <p class="icon-connectdoc"><a href="../">Connectdoc</a></p>
+                        <div id="enter" class="logged">
+                            <input type="checkbox" name="menu" id="mobiledropmenu">
+                            <label for="mobiledropmenu" class="label btn-green"><span class="icon"><img src="../images/avatar-user.jpg" alt="Nome do usuario"></span></label>
+                            <div class="title">
+                                <div class="dropdown-caret">
+                                    <span class="caret-outer"></span>
+                                    <span class="caret-inner"></span>
+                                </div>
+                                <ul>
+                                  <li class="name">Sergio de Moraes</li>
+                                  <li><a href="../perfil/"><span class="icon perfil"></span>Meu perfil</a></li>
+                                  <li><a href="../"><span class="icon logout"></span>Sair</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p class="menu-consultations"><a href="../minhasconsultas/"><span class="icon"></span> <strong class="top">Minhas</strong> <strong>Consultas</strong></a></p>
+                    </div>
+                </div>
+            </header>
+
+            <div id="content">
+                <div class="page-title">
+                    <div class="row">
+                        <figure class="avatar"><img src="../images/avatar-doc.png" alt="Nome do médico"></figure>
+						<p class="identification"><strong>Identificação profissional</strong>CRO-BA-8925</p>
+                        <h1>Dra. <strong>Ana Lúcia Nicolal Machado</strong></h1>
+                        <h2>Clínico Geral, Pediatra</h2>
+                        <h3>Especialista em disfunção temporomandibular e dor orofacial, Implantodontia, Ortodontia e Ortopedia facial, Prótese dentária, Reabilitação oral</h3>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <h4>Atende em</h4>
+                    <ul class="tab">
+                        <li class="active"><a href="#">Consultório particular</a></li>
+                        <li><a href="#">Clínica Granato Tijuca</a></li>
+                    </ul>
+                </div>
+
+                <div class="row clinic">
+                	<section id="location">
+                        <div id="map"></div>
+                    </section>
+                   	<dl class="first">
+                   		<dt><span class="icon address"></span>Endereço</dt>
+                        <dd>Rua Buarque de Macedo, 5, Flamengo, Rio de Janeiro, RJ</dd>
+                   	</dl>
+                   	<dl>
+                   		<dt><span class="icon phone"></span>Telefone</dt>
+                        <dd>(31) 2552-9742</dd>
+                        <dd>(31) 99979-4313 (WhatsApp - Deixe seu recado)</dd>
+                        <dd>(31) 99614-3691</dd>
+                   	</dl>
+                   	<dl>
+                   		<dt><span class="icon plans"></span>Atende</dt>
+                        <dd>Somente particular (sem plano de saúde)</dd>
+                        <ul class="insurance">
+                        	<li>Amil
+                            	<ul>
+                                	<li>Amil 300</li>
+                                    <li>Blue Nacional</li>
+                                    <li>Red Internacional</li>
+                                    <li>Black Internacional</li>
+                            	</ul>
+                            </li>
+                            <li>Bradesco
+                            	<ul>
+                                	<li>Bradesco Gold</li>
+                                    <li>Bradesco Nacional</li>
+                                    <li>Bradesco Internacional</li>
+                                    <li>Bradesco Estaual</li>
+                                </ul>
+                            </li>
+                            <li>Amil
+                            	<ul>
+                                	<li>Amil 300</li>
+                                    <li>Blue Nacional</li>
+                                    <li>Red Internacional</li>
+                                    <li>Black Internacional</li>
+                            	</ul>
+                            </li>
+                            <li>Bradesco
+                            	<ul>
+                                	<li>Bradesco Gold</li>
+                                    <li>Bradesco Nacional</li>
+                                    <li>Bradesco Internacional</li>
+                                    <li>Bradesco Estaual</li>
+                                </ul>
+                            </li>
+                        </ul>
+                   	</dl>
+                   	<dl>
+                   		<dt><span class="icon price"></span>Valor</dt>
+                        <dd>R$ 82,00</dd>
+                   	</dl>
+                </div>
+			  	<div class="row schedule">
+                	<h4>Marcar consulta <strong>(Selecione dia e horário de sua preferência)</strong></h4>
+                	<img src="http://i.imgur.com/m0ih2gd.png" style="100%">
+            	</div>
+            </div>
+            <footer id="footer">
+                <div class="row">
+                    <figure class="logo"><a href="/">Connectdoc</a></figure>
+                    <p class="terms">O uso deste site está sujeito aos termos e condições do <a href="#">Termo de Uso</a> e <a href="#">Política de Privacidade</a>.<br /> <span>Connectdoc © 2016. Todos os direitos reservados.</span></p>
+                    <ul class="icon">
+                        <li class="facebook"><a href="http://fb.com/Connectdoc" target="_blank"><span class="icon">Facebook</span></a></li>
+                        <li class="twitter"><a href="http://twitter.com/Connectdoc" target="_blank"><span class="icon">Twitter</span></a></li>
+                        <li class="instagram"><a href="http://instagram.com/Connectdoc" target="_blank"><span class="icon">Instagram</span></a></li>
+                        <li class="linkedin"><a href="http://linkedin.com/Connectdoc" target="_blank"><span class="icon">Linkedin</span></a></li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+	</body>
+</html>

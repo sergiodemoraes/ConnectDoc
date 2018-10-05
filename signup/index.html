@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="pt-BR" class="no-js">
+	<head>
+		<meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7, IE=9" />
+        <!-- CSS -->
+        <link href="../css/style.css?ver=1.1.1" rel="stylesheet" />
+        <link href="../css/font-awesome.css?ver=1.1.1" rel="stylesheet" />
+        <link href="../css/owl.carousel.css" rel="stylesheet">
+    	<link href="../css/owl.theme.css" rel="stylesheet">
+
+        <!-- SEO -->
+		<title>Connectdoc - Cadastro</title>
+		<meta name="description" content="ENCONTRE OS MELHORES ESPECIALISTAS NAS MELHORES CLÍNICAS E CONSULTÓRIOS">
+        <meta name="keywords" content="especialista, médico, consultório, clínica, busca, melhor, clínico, hospital, login">
+        <link sizes="16x16 24x24 32x32 48x48 64x64 128x128 256x256" type="image/x-icon" href="../images/favicon.ico" rel="icon shortcut">
+        <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+        <meta property="og:title" content="CONNECTDOC - ENCONTRE OS MELHORES ESPECIALISTAS NAS MELHORES CLÍNICAS E CONSULTÓRIOS"/>
+        <meta property="og:type" content="service"/>
+        <meta property="og:url" content="http://www.connectdoc.com/"/>
+        <meta property="og:image" content="../images/apple-touch-icon.png"/>
+        <meta property="og:site_name" content="Connectdoc"/>
+        <meta property="fb:admins" content="496965520357508"/>
+        <meta property="og:description" content="ENCONTRE OS MELHORES ESPECIALISTAS NAS MELHORES CLÍNICAS E CONSULTÓRIOS"/>
+
+    	<!-- JS -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript"></script>
+        <script type="text/javascript" src="../js/modernizr.js"></script>
+	</head>
+	<body>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <h1><a href="../">Connectdoc</a></h1>
+                <h2>Crie sua conta. É rápido e grátis.</h2>
+                <form name="login" action="../perfil/" method="GET" id="form">                    
+                    <fieldset>
+                        <label>E-mail</label>
+                        <input class="error" type="email" name="email" id="email" required placeholder="Seu e-mail">
+                        <p class="error">Digite um e-mail válido!</p>
+                        <label>Senha</label>
+                        <input type="password" name="password" required placeholder="Crie uma senha">
+                        <p class="forget"><a href="../login">Já tem uma conta? <strong>Entre</strong>.</a></p>
+                        <button id="send" class="btn-green" name="send" value="login" type="submit" onClick="return validar()">Criar conta</button>
+                    </fieldset>
+				</form>
+                <p class="problem"><a href="../">Se tiver problema com o recebimento deste e-mail, <br><strong>entre em contato</strong> que resolveremos para você! ;)</a></p>
+            </div>
+        </div>
+        <script>
+            // Validador do form #Contact
+            function validar() {
+                var message = form.message.value;
+                var subject = form.subject.value;
+                var email = form.email.value;
+                var filtro_mail = /^.+@.+\..{2,3}$/;
+                if (subject == "") {
+                    alert('Preencha seu nome.');
+                    form.subject.focus();
+                    return false;
+                }
+                if (!filtro_mail.test(email) || email=="") {
+                    alert("Use um e-mail válido.");
+                    form.email.focus();
+                    return false;
+                }
+                if (message == "") {
+                    alert('Preencha o campo com sua mensagem.');
+                    form.message.focus();
+                    return false;
+                }
+            }
+
+            // Troca palavras em frase do #About
+            var terms = ["Profissionais da Saúde", "Clínicas", "Consultórios"];
+            function rotateTerm() {
+              var ct = $("#rotate").data("term") || 0;
+              $("#rotate").data("term", ct == terms.length -1 ? 0 : ct + 1).text(terms[ct]).fadeIn()
+              .delay(2000).fadeOut(200, rotateTerm);
+            }
+            $(rotateTerm);
+        </script>
+    </body>
+</html>

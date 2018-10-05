@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="pt-BR" class="no-js">
+	<head>
+		<meta charset="UTF-8">
+        <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7, IE=9" />
+        <!-- CSS -->
+        <link href="../css/style.css?ver=1.1.1" rel="stylesheet" />
+        <link href="../css/font-awesome.css?ver=1.1.1" rel="stylesheet" />
+        <link href="../css/owl.carousel.css" rel="stylesheet">
+    	<link href="../css/owl.theme.css" rel="stylesheet">
+
+        <!-- SEO -->
+		<title>Connectdoc - Minhas Consultas Marcadas</title>
+		<meta name="description" content="ENCONTRE OS MELHORES ESPECIALISTAS NAS MELHORES CLÍNICAS E CONSULTÓRIOS">
+        <meta name="keywords" content="especialista, médico, consultório, clínica, busca, melhor, clínico, hospital, login">
+        <link sizes="16x16 24x24 32x32 48x48 64x64 128x128 256x256" type="image/x-icon" href="../images/favicon.ico" rel="icon shortcut">
+        <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+        <meta property="og:title" content="CONNECTDOC - ENCONTRE OS MELHORES ESPECIALISTAS NAS MELHORES CLÍNICAS E CONSULTÓRIOS"/>
+        <meta property="og:type" content="service"/>
+        <meta property="og:url" content="http://www.connectdoc.com/"/>
+        <meta property="og:image" content="../images/apple-touch-icon.png"/>
+        <meta property="og:site_name" content="Connectdoc"/>
+        <meta property="fb:admins" content="496965520357508"/>
+        <meta property="og:description" content="ENCONTRE OS MELHORES ESPECIALISTAS NAS MELHORES CLÍNICAS E CONSULTÓRIOS"/>
+
+    	<!-- JS -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript"></script>
+        <script type="text/javascript" src="js/modernizr.js"></script>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCg5prGZ57DxvBUfnqZxPuFP-43N27RoeQ&sensor=false"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <script src="../js/bootstrap-select.js"></script>
+	</head>
+	<body>
+        <div id="wrapper" class="page-perfil">
+            <header id="header" class="generic-bar">
+                <div class="header-search">
+                    <form name="search" action="../search/" method="GET" id="">
+                        <fieldset>
+                            <input type="text" class="" name="q" id="" size="50" maxlength="150" value="" placeholder="Procure especialista por nome, localidade, plano e especialidade" autocomplete="off">
+                            <button type="submit" id="" title="Buscar melhor especialista" alt="Buscar melhor especialista" class="btn btn-search"><span>Buscar</span></button>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="header-bar">
+                    <div class="row">
+                        <p class="icon-connectdoc"><a href="../">Connectdoc</a></p>
+                        <div id="enter" class="logged">
+                            <input type="checkbox" name="menu" id="mobiledropmenu">
+                            <label for="mobiledropmenu" class="label btn-green"><span class="icon"><img src="../images/avatar-user.jpg" alt="Nome do médico"></span></label>
+                            <div class="title">
+                                <div class="dropdown-caret">
+                                    <span class="caret-outer"></span>
+                                    <span class="caret-inner"></span>
+                                </div>
+                                <ul>
+                                  <li class="name">Sergio de Moraes</li>
+                                  <li><a href="../perfil/"><span class="icon perfil"></span>Meu perfil</a></li>
+                                  <li><a href="../"><span class="icon logout"></span>Sair</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p class="menu-consultations"><a href="../minhasconsultas/"><span class="icon"></span> <strong class="top">Minhas</strong> <strong>Consultas</strong></a></p>
+                    </div>
+                </div>
+            </header>
+
+            <div id="content">
+                <div class="page-title page-menu-tab">
+                    <div class="row">
+                        <h1>Meu perfil</h1>
+                        <button OnClick="location.href='#'" class="cancel">Cancelar</button>
+                        <button OnClick="location.href='#'" class="save"><span></span>Salvar</button>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <form name="contact" action="" method="POST" id="form" class="form-perfil">
+                        <fieldset>
+                        	<legend>Dados pessoais</legend>
+
+                            <table border="0" cellspacing="0" cellpadding="0" class="bio">
+                                <tr>
+                                    <th scope="row">
+                                    	<label for="foto">Foto</label>
+                                    </th>
+                                    <td>
+                                    	<figure class="avatar">
+                                            <img src="../images/avatar-user.jpg" alt="Nome do usuario">
+                                        </figure>
+                                        <button class="btn-transparent" OnClick="location.href='#'"><span class="icon change"></span>Alterar</button>
+                                        <button class="btn-transparent" OnClick="location.href='#'"><span class="icon cancel"></span>Remover</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                    	<label for="nome">Nome</label>
+                                    </th>
+                                    <td>
+                                    	<input type="text" name="nome">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                    	<label for="sobrenome">Sobrenome</label>
+                                    </th>
+                                    <td>
+                                    	<input type="text" name="sobrenome">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                    	<label for="cpf">CPF</label>
+                                    </th>
+                                    <td>
+                                    	<input type="text" name="cpf">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                    	<label for="nascimento">Nascimento</label>
+                                    </th>
+                                    <td>
+                                    	<input type="text" name="nascimento" placeholder="DD/MM/AAAA">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                    	<label for="sexo">Sexo</label>
+                                    </th>
+                                    <td>
+                                        <input id="radio-1" class="radio-custom" name="radio-group" type="radio" checked>
+                                        <label for="radio-1" class="radio-custom-label">Masculino</label>
+
+                                        <input id="radio-2" class="radio-custom"name="radio-group" type="radio">
+                                        <label for="radio-2" class="radio-custom-label">Feminino</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                    	<label for="escolaridade">Escolaridade</label>
+                                    </th>
+                                    <td>
+                                    	<select name="escolaridade" id="basic" class="selectpicker show-tick form-control" data-live-search="true">
+                                            <option selected>Selecione</option>
+                                            <option>Opção 1</option>
+                                            <option>Opção 2</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                    	<label for="civil">Estado civil</label>
+                                    </th>
+                                    <td>
+                                    	<select name="civil" id="basic" class="selectpicker show-tick form-control" data-live-search="false">
+                                            <option selected>Selecione</option>
+                                            <option>Opção 1</option>
+                                            <option>Opção 2</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                    	<label for="etinia">Etinia</label>
+                                    </th>
+                                    <td>
+                                    	<select name="etinia" id="basic" class="selectpicker show-tick form-control" data-live-search="true">
+                                            <option selected>Selecione</option>
+                                            <option>Opção 1</option>
+                                            <option>Opção 2</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                    	<label for="nacionalidade">Nacionalidade</label>
+                                    </th>
+                                    <td>
+                                    	<select name="nacionalidade" id="basic" class="selectpicker show-tick form-control" data-live-search="false">
+                                            <option selected>Selecione</option>
+                                            <option>Opção 1</option>
+                                            <option>Opção 2</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                    	<label for="uf">UF Nascimento</label>
+                                    </th>
+                                    <td>
+                                    	<select name="uf" id="basic" class="selectpicker show-tick form-control" data-live-search="false">
+                                            <option selected>Selecione</option>
+                                            <option>Opção 1</option>
+                                            <option>Opção 2</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                    	<label for="naturalidade">Naturalidade</label>
+                                    </th>
+                                    <td>
+                                    	<input type="text" name="naturalidade">
+                                    </td>
+                                </tr>
+        						<tr>
+                                    <th scope="row">
+                                    	<label for="profissao">Profissão</label>
+                                    </th>
+                                    <td>
+                                    	<input type="text" name="profissao">
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <table border="0" cellspacing="0" cellpadding="0" class="contact">
+                                <tr>
+                                    <th scope="row">
+                                    	<label for="plano">Plano de saúde</label>
+                                    </th>
+                                    <td>
+                                    	<select name="plano" id="basic" class="selectpicker show-tick form-control company" data-live-search="false">
+                                            <option selected>Selecione empresa</option>
+                                            <option>Opção 1</option>
+                                            <option>Opção 2</option>
+                                        </select>
+                                        <select name="plano" id="basic" class="selectpicker show-tick form-control plan" data-live-search="false">
+                                            <option selected>Selecione tipo</option>
+                                            <option>Opção 1</option>
+                                            <option>Opção 2</option>
+                                        </select>
+                                    </td>
+                                </tr>
+								<tr>
+                                    <th scope="row">
+                                    	<label for="email">E-mail</label>
+                                    </th>
+                                    <td>
+                                    	<input type="email" name="email" id="email" required placeholder="serjim@gmail.com" class="error">
+                                        <p class="error">Digite um e-mail válido!</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                    	<label for="celular">Telefone celular</label>
+                                    </th>
+                                    <td>
+                                    	<input type="text" name="celular">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                    	<label for="residencial">Telefone residencial</label>
+                                    </th>
+                                    <td>
+                                    	<input type="text" name="residencial">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                    	<label for="comercial">Telefone comercial</label>
+                                    </th>
+                                    <td>
+                                    	<input type="text" name="comercial">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                    	<label for="cep">CEP</label>
+                                    </th>
+                                    <td>
+                                    	<input type="text" name="cep">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                    	<label for="cidade">Cidade</label>
+                                    </th>
+                                    <td>
+                                    	<input type="text" name="cidade">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                    	<label for="bairro">Bairro</label>
+                                    </th>
+                                    <td>
+                                    	<input type="text" name="bairro">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                    	<label for="rua">Rua, Av, Etc.</label>
+                                    </th>
+                                    <td>
+                                    	<input type="text" name="rua">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                    	<label for="numero">Número</label>
+                                    </th>
+                                    <td>
+                                    	<input type="text" name="numero">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                    	<label for="complemento">Complemento</label>
+                                    </th>
+                                    <td>
+                                    	<input type="text" name="complemento">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                    	<label for="sms">Aceita SMS</label>
+                                    </th>
+                                    <td>
+                                        <input id="radio-1" class="radio-custom" name="radio-group2" type="radio" checked>
+                                        <label for="radio-1" class="radio-custom2-label">Sim</label>
+
+                                        <input id="radio-2" class="radio-custom" name="radio-group2" type="radio">
+                                        <label for="radio-2" class="radio-custom2-label">Não</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                    	<label for="spam">Aceita aviso por e-mail</label>
+                                    </th>
+                                    <td>
+                                    	<input id="radio-1" class="radio-custom" name="radio-group3" type="radio" checked>
+                                        <label for="radio-1" class="radio-custom-label">Sim</label>
+
+                                        <input id="radio-2" class="radio-custom" name="radio-group3" type="radio">
+                                        <label for="radio-2" class="radio-custom-label">Não</label>
+                                    </td>
+                                </tr>
+                            </table>
+                    	</fieldset>
+                    </form>
+
+                </div>
+            </div>
+
+            <footer id="footer">
+                <div class="row">
+                    <figure class="logo"><a href="/">Connectdoc</a></figure>
+                    <p class="terms">O uso deste site está sujeito aos termos e condições do <a href="#">Termo de Uso</a> e <a href="#">Política de Privacidade</a>.<br /> <span>Connectdoc © 2016. Todos os direitos reservados.</span></p>
+                    <ul class="icon">
+                        <li class="facebook"><a href="http://fb.com/Connectdoc" target="_blank"><span class="icon">Facebook</span></a></li>
+                        <li class="twitter"><a href="http://twitter.com/Connectdoc" target="_blank"><span class="icon">Twitter</span></a></li>
+                        <li class="instagram"><a href="http://instagram.com/Connectdoc" target="_blank"><span class="icon">Instagram</span></a></li>
+                        <li class="linkedin"><a href="http://linkedin.com/Connectdoc" target="_blank"><span class="icon">Linkedin</span></a></li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+	</body>
+</html>
