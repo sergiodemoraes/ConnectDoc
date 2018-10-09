@@ -793,9 +793,10 @@ input[disabled], input[readonly], textarea[disabled], button[disabled], .disable
 		padding: 0;
 	}
 		#list .doctor .infos, #list .doctor:hover .infos {
-			margin-right: 0;
+			margin-right: 25px;
 		}
 .page-search #location { display:none; }
+.page-specialist .schedule h4 { padding-left: 10px; }
 }
 
 @media (max-width:480px) {
@@ -857,13 +858,15 @@ input[disabled], input[readonly], textarea[disabled], button[disabled], .disable
 				#list .doctor .media { float:none; margin:-10px 0 10px 0; }
 					#list .doctor .media  .avatar, #list .doctor .media .message { display:none; }
 					#list .doctor .media button { display:inline-block; }
-				#list .doctor .infos { margin:0; }
+				#list .doctor .infos { margin:0; margin-right:0; }
 			#list article.active, #list .doctor:hover, body #list article.active:hover {
 			border-radius:0;
 			margin:-1px 0 0 0;
 			padding-left: 10px;
 			padding-bottom: 31px; }
 	#location { display:none; }
+
+	
 }
 
 @media (min-width:1500px) {
