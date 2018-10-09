@@ -42,11 +42,14 @@ html, body { height:100%; margin:0; padding:0; }
 
 		p.error { color:#FF3B30; }
 		p.error-medium { font-size:medium; }
-		input.error, textarea.error { border:2px solid #FF3B30; }
+		input.error, textarea.error { border-color: #FF3B30; }
 		.icon { font-family:'FontAwesome'; }
 		button.icon, span.icon { font-family:'PT Sans', Helvetica, Arial, sans-serif !important; }
 			.icon:before, .icon:after { font-family:'FontAwesome' !important; }
-		input, textarea, select { border:1px solid #d2d2d2; border-radius:3px; font-size:1.1em; padding:17px 20px; }
+		input, textarea, select, input[type=text] { -webkit-appearance: none; -moz-appearance: none; appearance: none; box-shadow: none; border:1px solid rgba(0,0,0,0.18); border-radius:3px; font-size:1.2em; padding:15px 20px; outline:none; }
+		input::placeholder, textarea::placeholder { color:rgba(0,0,0,0.4); }
+		input:focus, textarea:focus { border-color:rgba(0,0,0,0.4); outline:none; }
+		button:focus { border-color:none; outline:none; }
 
 
 .tab { display:inline-block; font-size:1.2em; padding:0 0 30px 0; }
@@ -80,7 +83,7 @@ html, body { height:100%; margin:0; padding:0; }
 				.header-search h1 .mascot { background:url(../images/logo-mascote.png) no-repeat center top; display:block; height:111px; margin:-120px auto 0 auto; width:110px; }
 		.header-search h2 { font-size:1.5em; font-weight:100; height:42px; left:50%; margin:33px 0 0 -191px; position: absolute; text-align:center; text-transform:uppercase; top:50%; width:382px; }
 		.header-search fieldset { background:#FFF; border-radius:3px; display:block; left:50%; margin:145px 0 0 -290px; overflow:hidden; padding:0; position:absolute; top:50%; width:580px; z-index:2; }
-			.header-search fieldset input { border:0; border-radius:3px; color: #303537; font-size:1.1em; line-height:31px; min-height:45px; outline:0; overflow:hidden; padding:5px 35px 5px 20px; text-overflow:ellipsis; /*width:87%;*/ width: calc(100% - 70px); }
+			.header-search fieldset input { border:0; border-radius:3px; color: #303537; font-size:1.4em; line-height:31px; min-height:45px; outline:0; overflow:hidden; padding:5px 35px 5px 20px; text-overflow:ellipsis; /*width:87%;*/ width: calc(100% - 70px); }
 			.header-search fieldset button { background-color:#fff; border-radius:2px; color:#C2C2C2; display:inline-block; font-size:26px; padding:0; height:55px; line-height:55px; position:absolute; right:0; text-align:center; top:0; width:53px; }
 				.header-search fieldset button:hover { color:#6B5094; }
 				.header-search fieldset button span { display:none; }
@@ -208,8 +211,8 @@ html, body { height:100%; margin:0; padding:0; }
 	#contact h4 { margin:10px auto 50px auto; text-align:center; font-size:1.7em; }
 	#contact form { margin:0 auto; width:570px; }
 		#contact form label { display:none; }
-		#contact form input,  #contact form textarea, #contact form button { display:block; margin:20px auto 5px auto; width:100%; }
-		#contact form input, #contact form textarea { border-radius:3px; font-size:1.1em; padding:17px 20px; width:530px; }
+		#contact form input, #contact form textarea, #contact form button { display:block; margin:20px auto 5px auto; width:100%; }
+		#contact form input, #contact form textarea { width:530px; }
 		#contact form button { font-size:1.3em; padding:16px; width:572px; }
 			#contact form p.error { padding-left:2px; text-align:left; }
 	#contact .phone { font-size:1.2em; margin:80px 0; }
@@ -225,7 +228,7 @@ html, body { height:100%; margin:0; padding:0; }
 		#newsletter .text { font-size:1.26em; display:inline-block; top:-12px; position:relative; width:36%; }
 		#newsletter form { float:right; width:48%; }
 			#newsletter form fieldset label { display:none; }
-			#newsletter form fieldset input { display:inline-block; font-size:1.12em; margin:0 20px 10px 0; width:321px; }
+			#newsletter form fieldset input { display:inline-block; margin:0 20px 0 0; padding:19px 20px; width:321px; }
 			#newsletter form fieldset p.error { left:2px; position:relative; top:-5px; }
 			#newsletter form fieldset button { font-size:1.15em; display:inline-block; padding:19px 40px; }
 
@@ -271,8 +274,8 @@ html, body { height:100%; margin:0; padding:0; }
 
 /* LOGIN
 ------------------------------------------- */
-.container-fluid { background-color:#6B5094; color:#fff; height:100%; display:table; width:100%; padding:0; }
-	.container-fluid .row-fluid { height:100%; display:table-cell; padding:60px 0; vertical-align: middle; text-align:center; }
+.container-fluid { background-color:#6B5094; color:#fff; height:100%; display:table; width:100%; padding:0; overflow: hidden; }
+	.container-fluid .row-fluid { height:100%; display:table-cell; vertical-align: middle; text-align:center; }
 		.container-fluid .row-fluid a { color:#fff; }
 		.container-fluid .row-fluid h1 { background:url(../images/logo-connectdoc.png) no-repeat center bottom; background-size:65%; margin:0 auto 30px auto; text-indent:-99999999px; width:382px; }
 			.container-fluid .row-fluid h1 a { display:block; }
@@ -280,12 +283,9 @@ html, body { height:100%; margin:0; padding:0; }
 		.container-fluid .row-fluid form { font-size:1.05em; max-width:300px; margin:0 auto; }
 			.container-fluid .row-fluid form > fieldset > label { display:none; }
             .container-fluid .row-fluid form > fieldset > .dropdown { border: none; display: block; margin: 20px -20px 5px -20px; width: 340px; }
-			.container-fluid .row-fluid form > fieldset > input { border:none; display:block; margin:20px 0 5px -20px; width:100%; }
-				.container-fluid .row-fluid form > fieldset > input.error { background-color:#F5934A; border:none; border:none; color:#fff; }
-					.container-fluid .row-fluid form input.error::-webkit-input-placeholder { color:#303637 !important; }
-					.container-fluid .row-fluid form input.error:-moz-placeholder { color:#303637 !important; }/* Firefox 18- */
-					.container-fluid .row-fluid form input.error::-moz-placeholder { color:#303637 !important; }/* Firefox 19+ */
-					.container-fluid .row-fluid form input.error:-ms-input-placeholder { color:#303637 !important; }
+			.container-fluid .row-fluid form > fieldset > input { background-color:rgba(0, 0, 0, 0.2); color: #fff; display:block; margin:20px 0 5px -20px; width:100%; }
+			.container-fluid .row-fluid form > fieldset > input::placeholder { color: rgba(255, 255, 255, 0.5); }
+				.container-fluid .row-fluid form > fieldset > input.error { border-color:#F5934A; }
 			.container-fluid .row-fluid form p.error { color:#F5934A; }
 			.container-fluid .row-fluid form  #send { font-size:1.1em; float:right; margin:20px -20px 40px 0; width:50%; }
 			.container-fluid .row-fluid form .forget { text-align: left; margin: 40px 0 0 -18px; float: left; }
@@ -296,7 +296,7 @@ html, body { height:100%; margin:0; padding:0; }
 
 /* SEARCH
 ------------------------------------------- */
-.page-search #list { height:100%; height:calc(100% - 225px); overflow-x: hidden; overflow-y: visible; position:fixed; top:75px; width:65%; }
+.page-search #list { height:100%; height:calc(100% - 225px); overflow-x: hidden; overflow-y: visible; top:75px; width:65%; }
 	#list .page-title { margin-top:0; }
 		#list .page-title span { font-size:.75em; }
 	#list .row { max-width:none; padding:0 30px 0 40px; }
@@ -340,7 +340,7 @@ html, body { height:100%; margin:0; padding:0; }
 			#list .active a { color:#fff; }
 		#list .doctor:hover { color:#444C50; background-color:#f4f4f4; border:none; margin-bottom:1px; }
 
-.page-search #location { background-color:#f2f2f2; border-left:1px solid #6B5094; height:100%; height:calc(100% - 225px); overflow:overlay; position:absolute; right:0; top:75px; width:35%; }
+.page-search #location { background-color:#f2f2f2; border-left:1px solid #6B5094; height:150%; overflow:overlay; position: fixed; right:0; top:75px; width:35%; }
 	.page-search #location #map { width:100%; height:100%; }
 	.page-search #location .close { float:right; margin-top:15px; }
 		.page-search #location .close a:before { content:"\f00d"; font-size:2.5em; }
@@ -682,7 +682,7 @@ input[disabled], input[readonly], textarea[disabled], button[disabled], .disable
 @media (max-width:1180px) {
 .row { margin:0 10px; max-width:100%; text-align:center; }
 	#contact form p.error { text-align:center; }
-.section-title .title { font-size:1em; padding: 20px 0; width:95%; }
+.section-title .title { font-size:1.1em; padding: 20px 0; width:95%; }
 
 .header-bar { margin:0; }
 	.header-bar .row { width:auto; }
@@ -745,11 +745,12 @@ input[disabled], input[readonly], textarea[disabled], button[disabled], .disable
 			#footer ul li { display:inline-block; float: none; margin:5px 15px 0 15px; }
 
 .page-search #list { height:calc(100% - 375px); position: relative; top:0; }
-.page-search #location { height:calc(100% - 145px); position: fixed; top:145px; }
+.page-search #location { position: fixed; top:145px; }
 	.page-search #list .row { padding:0; text-align:left; }
 		.page-search #list .row .filters form, .page-search #list .row .filters .local { width:100%; display:block; }
 
-.page-perfil form table, .page-perfil form .contact { display: table; float: none; margin: 0 auto; text-align: center; }
+.page-perfil form table { display: table; float: none; margin: 0 auto; text-align: center; width: 100%; }
+.page-perfil form .contact { margin: 0; padding: 0 }
 .page-perfil form .bio { margin-bottom: 0; }
 
 }
@@ -767,13 +768,29 @@ input[disabled], input[readonly], textarea[disabled], button[disabled], .disable
 	margin-top: -1px;
 	padding-left:10px;
 	padding-top: 31px; }*/
-
+	#list .doctor {
+	  margin: 0 2%;
+	  padding: 30px 0 30px 25px;
+	  width: auto;
+	  float: none;
+	}
+	#list article.active, #list .doctor:hover, body #list article.active:hover {
+    margin: -1px 2% 1px 2%;
+    border-radius: 3px;
+		padding: 31px 0 30px 25px;
+	}
+	#list article {
+		padding: 0;
+	}
+		#list .doctor .infos, #list .doctor:hover .infos {
+			margin-right: 0;
+		}
 .page-search #location { display:none; }
 }
 
 @media (max-width:480px) {
 	.row { max-width:460px; }
-		.section-title .title { font-size:85%; }
+		.section-title .title { font-size:98%; }
 
 		.header-search { min-height:480px; }
 			.header-search h1 { background-size:60%; height:43px; left:auto; margin:0 auto; top:190px; width:100%; }
@@ -781,35 +798,41 @@ input[disabled], input[readonly], textarea[disabled], button[disabled], .disable
 			.header-search h2 { left:auto; margin:0 auto; top:250px; width:100%; }
 				.header-search h2 strong { font-weight:100; }
 			.header-search fieldset { margin:325px auto; }
-				.header-search fieldset input { padding:5px 7px; }
+
 		.generic-bar .header-bar .icon-connectdoc a { background:url(../images/icon-connectdoc.png) no-repeat top left; display:block; float:left; height:30px; margin:7px 0 0 0; text-indent:-999999px; width:58px; }
 				.generic-bar .header-search fieldset { margin-top:70px; }
 
-	#content { padding-bottom:230px; padding-top:145px; }
+	#content { padding-bottom:230px; padding-top:145px; overflow: hidden;;}
 
+.container-fluid .row-fluid form {
+    max-width: 60%;
+	}
 
-	.page-perfil form table input { width: 270px; }
-	.page-perfil form table .form-control { width: 312px; }
+	.page-perfil form table input { width: 88%; }
+	.page-perfil form table .form-control { width: 100%; }
+		.page-perfil form table .form-control input { width: 82%; margin: 0; padding: 4%; height: auto; }
 	.page-perfil form table .plan { float: left; margin-top: 10px; }
 		.page-perfil form table th {
 			display: block;
 			padding: 12px 0 0 0;
 			text-align: left;
 			width: 100%;
+			margin: 10px 10px 10px 0;
 		}
 		.page-perfil form table td {
 	    display: block;
 	    padding: 0;
 			text-align: left;
+			margin: 0;
 		}
 		.checkbox-custom, .checkbox-custom-label, .radio-custom, .radio-custom-label {
-	    margin: 0;
+	    margin-right: 20px;
 		}
 		.page-perfil form table .input-group-btn {
 	    top: 0px;
 		}
 
-	    #about h4 { font-size:212%; }
+	    #about h4 { font-size:230%; line-height: 1.2em; }
 
 		#pricing .plan { width:90%; margin: 20px auto; }
 		#pricing .plan1 { margin-top:50px !important; }
@@ -818,23 +841,18 @@ input[disabled], input[readonly], textarea[disabled], button[disabled], .disable
 
 		#footer .logo a { background-size:50%; float:none; width:100%; }
 
-
 	.page-search #list { position:relative; top:0; width:100%; }
 		#list .row .filters form, #list .row .filters .local { width:100%; display:block; }
-			#list .doctor { margin-left:0; padding:30px 10px; }
+			#list .doctor { margin:0; padding:30px 10px; }
 				#list .doctor .media { float:none; margin:-10px 0 10px 0; }
 					#list .doctor .media  .avatar, #list .doctor .media .message { display:none; }
 					#list .doctor .media button { display:inline-block; }
 				#list .doctor .infos { margin:0; }
 			#list article.active, #list .doctor:hover, body #list article.active:hover {
-			border-top-left-radius:0;
-			border-bottom-left-radius: 0;
-			margin-left: 0;
-			margin-top: -1px;
+			border-radius:0;
+			margin:-1px 0 0 0;
 			padding-left: 10px;
-			padding-top: 31px; }
-
-
+			padding-bottom: 31px; }
 	#location { display:none; }
 }
 
