@@ -740,7 +740,7 @@ input[disabled], input[readonly], textarea[disabled], button[disabled], .disable
 			#footer .logo a { background-position:center; float: none; width:100%; }
 			#footer .terms { display:block; margin:0 auto; position: relative; top:70px; width:80%; }
 				#footer .terms span { display:block; margin-top:10px; }
-			#footer ul { margin: 0 auto; width: 100%; top:38px; position:absolute; }
+			#footer ul { margin: 0 auto; width: 100%; top:38px; position:absolute; text-align: center; }
 				#footer ul li { display:inline-block; float: none; margin:5px 15px 0 15px; }
 
 	.page-search #list { height:calc(100% - 375px); position: relative; top:0; }
@@ -866,7 +866,7 @@ input[disabled], input[readonly], textarea[disabled], button[disabled], .disable
 			padding-bottom: 31px; }
 	#location { display:none; }
 
-	
+
 }
 
 @media (min-width:1500px) {
